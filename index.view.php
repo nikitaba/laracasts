@@ -5,12 +5,20 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <?php foreach ($person as $feature => $value): ?>
-                <li><?= '<strong>'.$feature.': </strong>'.$value; ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </header>
+    <h1>Task For The Day</h1>
+    <ul>
+        <li>
+            <strong>Name: </strong><?= $task['title']?>
+        </li>
+        <li>
+            <strong>Due Date: </strong><?= $task['due']?>
+        </li>
+        <li>
+            <strong>Person Responsible: </strong><?= $task['assigned_to']?>
+        </li>
+        <li>
+            <strong>Status: </strong><?= $task['completed'] ? '&#9745;' : '&#9746;'?>
+        </li>
+    </ul>
 </body>
 </html>
