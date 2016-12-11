@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+<?php require 'partials/head.php'; ?>
     <h1>Task For The Day</h1>
     <ul>
         <?php foreach ($tasks as $taskKey => $task): ?>
@@ -18,5 +12,4 @@
             </li>
         <?php endforeach; ?>
     </ul>
-</body>
-</html>
+<?php require 'partials/footer.php';?>
