@@ -2,8 +2,8 @@
 
 class Task
 {
-    protected $description;
-    protected $completed;
+    public $description;
+    public $completed;
 
     public function completeTheTask()
     {
