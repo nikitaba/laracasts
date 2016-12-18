@@ -1,7 +1,9 @@
 <?php
 
-$query = require 'core/bootstrap.php';
+require 'vendor/autoload.php';
+require 'core/bootstrap.php';
 
-$uri = trim($_SERVER['REQUEST_URI'], '/');
+use App\Core\Router;
+use App\Core\Request;
 
-require Router::load('routes.php')->direct(Request::uri());
+Router::load('app/routes.php')->direct(Request::uri(), Request::method());
